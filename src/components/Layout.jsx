@@ -4,22 +4,47 @@ import {
   Button,
   Container,
   CssBaseline,
-  Stack,
   Typography,
 } from "@mui/material";
-import React, { useState } from "react";
-import getApi from "../api/getApi";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import ColorContainer from "./ColorContainer";
 
 
 const Layout = () => {
-    const [paleta,setPaleta] = useState(['','','','',])
 
-    const llamarApi = () => {
-        setPaleta(getApi())
+  const initialColors = ['#000000', '#000000','#000000', '#000000']
+    const [paleta,setPaleta] = useState(initialColors)
+    const [button,setButton] = useState(0)
+
+    const getColors = () => {
+      setButton(button+1)
     }
+    // const getColors =  () => {
+    //   console.log('entré a llamarApi')
+    //     // setPaleta(getApi())
+    //     const holamundo = getApi();
+    //     console.log('!!!: ', holamundo)
+    //     console.log('pasó el setpaleta')
+    // }
+
+    useEffect(() => {
+      axios.get('https://random-palette-generator.p.rapidapi.com/palette/Monochromatic/1/4',{
+        headers: {
+            'X-RapidAPI-Host' : 'random-palette-generator.p.rapidapi.com',
+            'X-RapidAPI-Key' : process.env.REACT_APP_API_KEY
+          }
+        })
+        .then(res=>{
+          const datos = res.data.data[0].palette
+          setPaleta(datos)
+        }
+    )
+    }, [button])
+    
   return (
     <Container component="main">
+
       <CssBaseline />
       <Box
         sx={{
@@ -37,14 +62,14 @@ const Layout = () => {
           Presiona en actualizar para obtener nuevos colores
         </Typography>
         
-        <ColorContainer paleta={paleta}/>
+        <ColorContainer colores={paleta}/>
 
         <Button
           sx={{ backgroundColor: "primary.dark" }}
           variant="contained"
           endIcon={<Autorenew />}
           size="medium"
-          onClick={llamarApi}
+          onClick={getColors}
         >
           Actualizar
         </Button>

@@ -1,23 +1,20 @@
-import { Box } from '@mui/material'
-import React from 'react'
+import { Box, Grid } from '@mui/material'
+import React, { useEffect, useState } from 'react'
 import SingleColor from './SingleColor'
 
-const ColorContainer = ({paleta}) => {
-    console.log(paleta)
+const ColorContainer = ({colores}) => {
+  
+    console.log('ColorContainer: ', colores)
+    const [paleta,setPaleta] = useState(colores)
+
+    useEffect(() => {
+      setPaleta(colores)
+    }, [colores])
+    
   return (
-    <Box
-          sx={{
-            marginTop: 3,
-            marginBottom:4,
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            width: "60%",
-            gap: 0.5,
-          }}
-        >
-          {paleta.map(element => <SingleColor />)}
-        </Box>
+    <Grid container sx={{display:'flex', justifyContent:'center'}} mt={2} mb={3} >
+      {paleta.map(element=> <SingleColor color={element}/>)}
+    </Grid>
   )
 }
 
