@@ -1,0 +1,11 @@
+.navbar__container{
+    display:flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    background-color: rgb(48, 48, 106);
+    color: white;
+}
+
+.navbar__links{
+    display:flex;
+}
