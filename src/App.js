@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import './App.css';
+import './styles/App.css';
 import ContenedorDeColores from './components/ContenedorDeColores';
 import Navbar from './components/Navbar';
 
@@ -28,13 +28,13 @@ function App() {
   }, [])
   
   return (
-    <div>
+    <div className='main__container'>
       <Navbar />
       <h1>Generador de paletas de colores aleatorios</h1>
       <h2>Presione en actualizar para generar otros colores</h2>
       <ContenedorDeColores colores={colores}/>
-      <button onClick={llamarApi}>Actualizar</button>
-      <button>Guardar</button>
+      <button className='main__button' onClick={llamarApi}>Actualizar</button>
+      <button className='main__button'>Guardar</button>
     </div>
   );
 }

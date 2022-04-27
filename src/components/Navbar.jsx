@@ -6,7 +6,7 @@ const Navbar = () => {
       <nav className='navbar__container'>
           <h3>ColorsGenerator</h3>
         <ul className='navbar__links'>
-            <li >Inicio</li>
+            <li>Inicio</li>
             <li>Favoritos</li>
         </ul>
     </nav>

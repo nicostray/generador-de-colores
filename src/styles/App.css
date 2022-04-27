@@ -1,0 +1,9 @@
+@import url('./_vars.css');
+
+.main__button{
+    background: var(--primaryColor);
+    color:white;
+    padding: 8px 12px;
+    border:none;
+    border-radius: 5px;
+}
