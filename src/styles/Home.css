@@ -1,5 +1,16 @@
 @import url('./_vars.css');
 
+.home__container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home__button-container{
+    display:flex;
+    gap: 5px;
+    margin-top:10px;
+}
 .main__button{
     background: var(--primaryColor);
     color:white;

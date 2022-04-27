@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import Navbar from '../components/Navbar'
 import ContenedorDeColores from '../components/ContenedorDeColores'
+import '../styles/Home.css'
 
 const Home = () => {
   
@@ -26,13 +26,14 @@ const Home = () => {
     }, [])
     
     return (
-      <div className='main__container'>
-        <Navbar />
+      <div className='home__container'>
         <h1>Generador de paletas de colores aleatorios</h1>
         <h2>Presione en actualizar para generar otros colores</h2>
         <ContenedorDeColores colores={colores}/>
-        <button className='main__button' onClick={llamarApi}>Actualizar</button>
-        <button className='main__button'>Guardar</button>
+        <div className='home__button-container'>
+            <button className='main__button' onClick={llamarApi}>Actualizar</button>
+            <button className='main__button'>Guardar</button>
+        </div>
       </div>
     );
 }
