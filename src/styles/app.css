@@ -1,0 +1,6 @@
+@import url('./_vars.css');
+
+.app__container{
+    position:relative;
+    min-height: 100vh;
+}
