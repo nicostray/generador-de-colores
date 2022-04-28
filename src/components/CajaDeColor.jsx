@@ -6,7 +6,7 @@ const CajaDeColor = ({color}) => {
         backgroundColor: `${color}`
     }
   return (
-    <div className='CajaDeColor__container' style={styles}>
+    <div className='CajaDeColor__container' style={styles} onClick={ () => navigator.clipboard.writeText(color)}>
             <p>{color}</p>
     </div>
   )

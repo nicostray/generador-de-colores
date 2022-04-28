@@ -1,6 +1,6 @@
 .CajaDeColor__container{
-    height: 200px;
-    width: 120px;
+    height: 220px;
+    width: 140px;
     border-radius: 10px;
     position:relative;
     cursor: pointer;
@@ -10,7 +10,7 @@
     color: white;
     background-color:rgba(0, 0, 0, 0.566);
     position: absolute;
-    bottom: 0px;
+    bottom: 5px;
     right: 5px;
     padding:2px;
     border-radius: 5px;
