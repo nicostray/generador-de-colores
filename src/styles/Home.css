@@ -11,12 +11,12 @@
     margin: 40px auto;
     padding:30px 50px;
     border-radius: 15px;
+    text-align: center;
 }
 
 .home__button-container{
     display:flex;
     gap: 10px;
-    /* margin-top:10px; */
 }
 .home__button{
     background: var(--secondaryColor);
@@ -32,4 +32,8 @@
     transform: scale(1.1);
     transition: all .5s ease;
     background-color: var(--darkSecondaryColor);
+}
+
+@media (max-width: 870px){
+
 }

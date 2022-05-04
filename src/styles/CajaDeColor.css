@@ -16,3 +16,10 @@
     border-radius: 5px;
     
 }
+
+@media (max-width: 870px){
+    .CajaDeColor__container{
+        height: 60px;
+        width: 400px;
+    }
+}
