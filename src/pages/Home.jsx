@@ -32,7 +32,7 @@ const Home = () => {
         <ContenedorDeColores colores={colores}/>
         <div className='home__button-container'>
             <button className='home__button' onClick={llamarApi}> <i class="fa-solid fa-arrows-rotate"></i> Actualizar</button>
-            <button className='home__button'> <i class="fa-solid fa-star"></i> Guardar</button>
+            <button className='home__button'> <i class="fa-regular fa-star"></i> Guardar</button>
         </div>
       </div>
     );

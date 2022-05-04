@@ -20,6 +20,7 @@
     text-decoration: none;
     color:white;
     font-weight: bold;
+    display:flex;
 }
 
 .navbar__links li:hover{
@@ -30,4 +31,19 @@
 .navbar__links li:hover > .navbar__link{
     transition: all .5s ease;
     color: var(--secondaryColor)
+}
+
+.navbar__link .fa-solid{
+    margin-top:3px;
+}
+
+@media(max-width: 500px){
+
+    .navbar__links{
+        margin-right: 0;
+    }
+
+    .navbar__logo{
+        display:none;
+    }
 }
