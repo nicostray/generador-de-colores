@@ -12,7 +12,7 @@ import './styles/app.css'
 function App() {
   return (
       <div className='app__container'>
-        <Router>
+         <Router basename={process.env.PUBLIC_URL}>
           <Navbar />
             <RutasAnimadas />
           <Footer />
