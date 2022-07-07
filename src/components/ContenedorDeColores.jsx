@@ -1,13 +1,15 @@
 import React from 'react'
 import '../styles/ContenedorDeColores.css'
 import CajaDeColor from './CajaDeColor'
-
+import { motion, AnimatePresence } from 'framer-motion'
 
 const ContenedorDeColores = ({colores}) => {
   return (
-    <div className='contenedor-container'>
-        {colores.map(element => <CajaDeColor color={element}/>)}
-    </div>
+    <AnimatePresence>
+      <motion.div className='contenedor-container' initial={{ opacity: 0}} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+          {colores.map(element => <CajaDeColor key={element} color={element}/>)}
+      </motion.div>
+    </AnimatePresence>
   )
 }
 

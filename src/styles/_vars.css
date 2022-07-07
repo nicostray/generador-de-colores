@@ -2,9 +2,25 @@
     --white:#FFFF;
     --primaryColor: hsl(211deg 21% 19%);
     --black:hsl(210deg 7% 17%);
-    --lightPrimaryColor: rgb(58, 58, 58);
+    --lightPrimaryColor: rgb(47, 60, 73);
     --secondaryColor: hsl(340deg 82% 52%);
+    --lightSecondaryColor: rgb(219, 110, 147);
     --darkSecondaryColor: rgb(174, 26, 76);
     --grey: hsl(0deg 0% 94%);
+    --green: #00d26d;
+    /* --green: #00e676; */
+}
 
+body::-webkit-scrollbar{
+    width: 10px;
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: var(--lightPrimaryColor);
+    border-radius: 10px;
+}
+
+.hidden{
+    display:none;
 }

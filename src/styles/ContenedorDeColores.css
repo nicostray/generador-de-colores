@@ -1,11 +1,19 @@
 .contenedor-container{
     display:flex;
     gap:2px;
-    margin: 20px 0;
+    margin: 10px 0 12px 0;
+    width: fit-content;
 }
 
 @media (max-width: 870px){
     .contenedor-container{
         flex-direction: column;
+        width: 50%;
+    }
+}
+
+@media (max-width: 620px){
+    .contenedor-container{
+        width: 70%;
     }
 }

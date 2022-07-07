@@ -1,6 +1,12 @@
 @import url('./_vars.css');
 
 .home__container{
+    width: 100%;
+    min-height: calc(100vh - 65px - 100px);
+    position:relative;
+}
+
+.home__center-container{
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -12,6 +18,11 @@
     padding:30px 50px;
     border-radius: 15px;
     text-align: center;
+    max-width: 70vw;
+}
+
+.home__center-parrafo{
+    margin-top:2px;
 }
 
 .home__button-container{
@@ -34,6 +45,19 @@
     background-color: var(--darkSecondaryColor);
 }
 
-@media (max-width: 870px){
+.home__button--disabled{
+    background-color: var(--lightSecondaryColor);
+    cursor:initial;
+    color:white;
+    padding: 10px 15px;
+    border:none;
+    border-radius: 5px;
+    font-weight: bold;
+}
 
+@media (max-width: 470px){
+
+    .home__center-container{
+        padding: 20px;
+    }
 }
