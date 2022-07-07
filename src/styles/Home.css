@@ -55,6 +55,10 @@
     font-weight: bold;
 }
 
+.home__gif-cargando{
+    height: 230px;
+}
+
 @media (max-width: 470px){
 
     .home__center-container{

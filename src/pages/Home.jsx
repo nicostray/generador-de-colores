@@ -50,7 +50,7 @@ const Home = () => {
             <h1>Generador de paletas de colores monocromaticos</h1>
             <h3>Presione en actualizar para generar otros colores</h3>
             <p className='home__center-parrafo'>Si desea copiar un color, haga click en él</p>
-            {cargando ? <img src={gifCargando}/> : <ContenedorDeColores colores={colores} />}
+            {cargando ? <img className='home__gif-cargando' src={gifCargando}/> : <ContenedorDeColores colores={colores} />}
             <div className='home__button-container'>
                 <button className='home__button' onClick={llamarApi}> <i className="fa-solid fa-arrows-rotate"></i> Actualizar</button>
                 <button disabled={colorGuardado} className={`${colorGuardado ? 'home__button--disabled' : 'home__button'}`} onClick={() => agregarAFavoritos(colores)}> {colorGuardado ?  <i className="fa-solid fa-star"></i> : <i className="fa-regular fa-star"></i>} {colorGuardado ? 'Guardado' : 'Guardar'}</button>
