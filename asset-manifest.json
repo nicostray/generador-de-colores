@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/generador-de-colores/static/css/main.f4488905.css",
+    "main.js": "/generador-de-colores/static/js/main.d5532f40.js",
+    "static/media/loading.gif": "/generador-de-colores/static/media/loading.919d724b9a18d42353e8.gif",
+    "index.html": "/generador-de-colores/index.html",
+    "main.f4488905.css.map": "/generador-de-colores/static/css/main.f4488905.css.map",
+    "main.d5532f40.js.map": "/generador-de-colores/static/js/main.d5532f40.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f4488905.css",
+    "static/js/main.d5532f40.js"
+  ]
+}
